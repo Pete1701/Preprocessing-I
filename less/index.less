@@ -54,6 +54,153 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;	
 }
+
+*{
+	font-size: 62.5%;
+}
+
+.container {
+	margin:5%;
+}
+
+@background: rgb(166, 211, 211);
+
+@title-font:'PT Mono', monospace;
+
+.columns (){
+	display: flex;
+	flex-direction: column;
+}
+
+header{
+	nav{
+		text-align: end;
+		margin: 4% 0;		
+	}
+
+	a{
+		margin: 0 2%;
+		text-decoration: none;
+	}
+
+	@media (max-width: 500px) {
+		nav{
+			.columns();
+			align-items: center;
+		}
+	}
+}
+
+.top {
+	.columns();
+	background: @background;
+	padding: 5%;
+
+	img {
+		width:40%;
+		margin:3% 0;
+	}
+
+	h1{
+	font-size: 2.2rem;
+	font-family:@title-font;
+	}
+
+	h4{
+		font-size: 1.1rem;
+		margin: 2% 0;
+		font-family:@title-font;
+	}
+
+	.line{
+		border-bottom: solid 1px blue;
+	}
+
+	p{
+		margin: 2% 0;
+	}
+
+	button{
+		width:20%;
+		height:40px;
+		display: block;
+		background-color: gray;
+		color:white;
+		margin: 2% 0;	
+		font-size: 0.8rem;
+		border-radius: 5px;
+	}
+}
+
+.main{
+	display: flex;
+	margin: 3% 0;
+	justify-content: space-between;	
+
+	div{
+		width:45%;
+	}
+
+	h2{
+		font-size: 1.7rem;
+		font-family:@title-font;
+	}
+	
+	h3{
+		font-size: 1.3rem;
+		font-family:@title-font;
+	}
+
+	p, ul{
+		margin: 4% 0;
+	}
+
+	ul{
+		.columns();		
+	}
+
+	li {
+		margin: 3% 5%;
+	}
+
+	@media (max-width: 500px) {
+		.main{			
+			.columns();
+			align-items: center;			
+		}
+	}
+}
+
+.bottom{
+	h3{
+		font-size: 1.3rem;
+		font-family:@title-font;
+	}
+
+	table{
+		margin: 3% 0;
+	}
+
+	td, th {
+		text-align: left;
+		padding: 1.5%;
+		border-bottom: 1px solid #ddd;
+	}
+
+	tr:nth-child(even) {background-color: #f2f2f2;}
+}
+
+footer{
+	text-align: center;
+	margin: 7% 0;
+	height: 50px;
+	background: lightgray;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: @background;
+}
+
 
